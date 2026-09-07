@@ -260,3 +260,11 @@ msgid ""
 msgstr "Xinference 内置的灵活模型 launcher 可以在  "
 "`Github <https://github.com/xorbitsai/inference/tree/main/xinference/model/flexible/launchers>`_ 找到，"
 "欢迎贡献更多传统机器学习模型的支持！"
+
+#: ../../source/models/model_abilities/flexible.rst
+msgid "Local text classification models"
+msgstr "本地文本分类模型"
+
+#: ../../source/models/model_abilities/flexible.rst
+msgid "Register a local BERT or other Transformers sequence classification model using the same launcher with ``task=\"text-classification\"``. The directory must contain a trained classification model and tokenizer saved with ``save_pretrained``; a base encoder or a training checkpoint alone is insufficient. The model's ``config.json`` supplies ``id2label``, ``label2id`` and ``problem_type``. The directory must be accessible on the worker that loads the model."
+msgstr "使用同一 launcher 并设置 ``task=\"text-classification\"``，即可注册本地 BERT 或其他 Transformers 序列分类模型。目录必须包含通过 ``save_pretrained`` 保存的已训练分类模型和分词器；仅有基础编码器或训练检查点是不够的。模型的 ``config.json`` 提供 ``id2label``、``label2id`` 和 ``problem_type``。加载模型的 worker 必须能够访问该目录。"

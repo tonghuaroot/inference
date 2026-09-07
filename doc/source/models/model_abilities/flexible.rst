@@ -115,6 +115,16 @@ After the model is successfully loaded, we can perform inference using the follo
 
     {"sequence":"one day I will see the world","labels":["travel","cooking","dancing"],"scores":[0.9799638986587524,0.010605016723275185,0.009431036189198494]}
 
+Local text classification models
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Register a local BERT or other Transformers sequence classification model using
+the same launcher with ``task="text-classification"``. The directory must contain
+a trained classification model and tokenizer saved with ``save_pretrained``;
+a base encoder or a training checkpoint alone is insufficient. The model's
+``config.json`` supplies ``id2label``, ``label2id`` and ``problem_type``.
+The directory must be accessible on the worker that loads the model.
+
 ModelScope Pipeline Model
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
